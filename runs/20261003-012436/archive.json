@@ -1,0 +1,911 @@
+[
+ {
+  "id": "s0",
+  "parent": null,
+  "idea": "seed: cube4_annealing.py",
+  "path": "D:\\Three points\\runs\\20261003-012436\\programs\\s0_cube4_annealing.py",
+  "fitness": 0.9340667082514909,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 9,
+    "submitted": 22,
+    "triples": 0,
+    "valid_points": 22,
+    "target": 23,
+    "ratio": 0.9565217391304348,
+    "solved": false,
+    "error": null,
+    "seconds": 19.24
+   },
+   {
+    "n": 10,
+    "submitted": 24,
+    "triples": 0,
+    "valid_points": 24,
+    "target": 26,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 19.18
+   },
+   {
+    "n": 11,
+    "submitted": 26,
+    "triples": 0,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 19.22
+   },
+   {
+    "n": 13,
+    "submitted": 30,
+    "triples": 0,
+    "valid_points": 30,
+    "target": 32,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.17
+   },
+   {
+    "n": 14,
+    "submitted": 32,
+    "triples": 0,
+    "valid_points": 32,
+    "target": 35,
+    "ratio": 0.9142857142857143,
+    "solved": false,
+    "error": null,
+    "seconds": 19.24
+   },
+   {
+    "n": 15,
+    "submitted": 34,
+    "triples": 0,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.22
+   }
+  ],
+  "usage": null
+ },
+ {
+  "id": "s1",
+  "parent": null,
+  "idea": "seed: evolved_cube_g011.py",
+  "path": "D:\\Three points\\runs\\20261003-012436\\programs\\s1_evolved_cube_g011.py",
+  "fitness": 0.9194668405266232,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 9,
+    "submitted": 22,
+    "triples": 0,
+    "valid_points": 22,
+    "target": 23,
+    "ratio": 0.9565217391304348,
+    "solved": false,
+    "error": null,
+    "seconds": 19.49
+   },
+   {
+    "n": 10,
+    "submitted": 24,
+    "triples": 0,
+    "valid_points": 24,
+    "target": 26,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 19.5
+   },
+   {
+    "n": 11,
+    "submitted": 26,
+    "triples": 0,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 19.5
+   },
+   {
+    "n": 13,
+    "submitted": 29,
+    "triples": 0,
+    "valid_points": 29,
+    "target": 32,
+    "ratio": 0.90625,
+    "solved": false,
+    "error": null,
+    "seconds": 19.51
+   },
+   {
+    "n": 14,
+    "submitted": 31,
+    "triples": 0,
+    "valid_points": 31,
+    "target": 35,
+    "ratio": 0.8857142857142857,
+    "solved": false,
+    "error": null,
+    "seconds": 19.53
+   },
+   {
+    "n": 15,
+    "submitted": 33,
+    "triples": 0,
+    "valid_points": 33,
+    "target": 36,
+    "ratio": 0.9166666666666666,
+    "solved": false,
+    "error": null,
+    "seconds": 19.51
+   }
+  ],
+  "usage": null
+ },
+ {
+  "id": "g001",
+  "parent": "s1",
+  "idea": "Keep the parent's solver but accept `start`: skip the symmetric phase, seed ILS and the fixed-k tabu search from the warm start to try to reach k+1, and never return fewer points than `start`.",
+  "path": "runs\\20261003-012436\\programs\\g001.py",
+  "fitness": 0.9340667082514909,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 9,
+    "submitted": 22,
+    "triples": 0,
+    "valid_points": 22,
+    "target": 23,
+    "ratio": 0.9565217391304348,
+    "solved": false,
+    "error": null,
+    "seconds": 19.11
+   },
+   {
+    "n": 10,
+    "submitted": 24,
+    "triples": 0,
+    "valid_points": 24,
+    "target": 26,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 19.13
+   },
+   {
+    "n": 11,
+    "submitted": 26,
+    "triples": 0,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 19.14
+   },
+   {
+    "n": 13,
+    "submitted": 30,
+    "triples": 0,
+    "valid_points": 30,
+    "target": 32,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.14
+   },
+   {
+    "n": 14,
+    "submitted": 32,
+    "triples": 0,
+    "valid_points": 32,
+    "target": 35,
+    "ratio": 0.9142857142857143,
+    "solved": false,
+    "error": null,
+    "seconds": 19.12
+   },
+   {
+    "n": 15,
+    "submitted": 34,
+    "triples": 0,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.16
+   }
+  ],
+  "usage": {
+   "input_tokens": 9703,
+   "output_tokens": 9749,
+   "model": "claude-sonnet-5-5"
+  }
+ },
+ {
+  "id": "g002",
+  "parent": "s0",
+  "idea": "Plateau search with numpy-vectorised \"free cell\" counts (cells not coplanar with any triple). It does best-removal swaps with tabu, and kicks on stagnation, warm-started from `start`.",
+  "path": "runs\\20261003-012436\\programs\\g002.py",
+  "fitness": 0.9340667082514909,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 9,
+    "submitted": 22,
+    "triples": 0,
+    "valid_points": 22,
+    "target": 23,
+    "ratio": 0.9565217391304348,
+    "solved": false,
+    "error": null,
+    "seconds": 18.95
+   },
+   {
+    "n": 10,
+    "submitted": 24,
+    "triples": 0,
+    "valid_points": 24,
+    "target": 26,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 18.97
+   },
+   {
+    "n": 11,
+    "submitted": 26,
+    "triples": 0,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 18.96
+   },
+   {
+    "n": 13,
+    "submitted": 30,
+    "triples": 0,
+    "valid_points": 30,
+    "target": 32,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 18.97
+   },
+   {
+    "n": 14,
+    "submitted": 32,
+    "triples": 0,
+    "valid_points": 32,
+    "target": 35,
+    "ratio": 0.9142857142857143,
+    "solved": false,
+    "error": null,
+    "seconds": 18.98
+   },
+   {
+    "n": 15,
+    "submitted": 34,
+    "triples": 0,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.04
+   }
+  ],
+  "usage": {
+   "input_tokens": 3025,
+   "output_tokens": 8097,
+   "model": "claude-sonnet-5-5"
+  }
+ },
+ {
+  "id": "g003",
+  "parent": "g001",
+  "idea": "Keep the parent solver. Diversify with a seed-randomised symmetry for cold restarts (diagonal 180\u00b0 rotation, z-axis 180\u00b0 rotation, or none), and take cold restarts ~30% of the time instead of always warm-starting. Return the better of the two, never fewer points than `start`.",
+  "path": "runs\\20261003-012436\\programs\\g003.py",
+  "fitness": 0.9340667082514909,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 9,
+    "submitted": 22,
+    "triples": 0,
+    "valid_points": 22,
+    "target": 23,
+    "ratio": 0.9565217391304348,
+    "solved": false,
+    "error": null,
+    "seconds": 19.13
+   },
+   {
+    "n": 10,
+    "submitted": 24,
+    "triples": 0,
+    "valid_points": 24,
+    "target": 26,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 19.1
+   },
+   {
+    "n": 11,
+    "submitted": 26,
+    "triples": 0,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 19.11
+   },
+   {
+    "n": 13,
+    "submitted": 30,
+    "triples": 0,
+    "valid_points": 30,
+    "target": 32,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.14
+   },
+   {
+    "n": 14,
+    "submitted": 32,
+    "triples": 0,
+    "valid_points": 32,
+    "target": 35,
+    "ratio": 0.9142857142857143,
+    "solved": false,
+    "error": null,
+    "seconds": 19.14
+   },
+   {
+    "n": 15,
+    "submitted": 34,
+    "triples": 0,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.1
+   }
+  ],
+  "usage": {
+   "input_tokens": 10327,
+   "output_tokens": 11548,
+   "model": "claude-sonnet-5-5"
+  }
+ },
+ {
+  "id": "g004",
+  "parent": "g003",
+  "idea": "Cold restarts use larger symmetry groups (3-fold diagonal C3, D3, D2) with general orbit handling and a longer symmetric phase. Warm starts continue as before.",
+  "path": "runs\\20261003-012436\\programs\\g004.py",
+  "fitness": 0.9340667082514909,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 9,
+    "submitted": 22,
+    "triples": 0,
+    "valid_points": 22,
+    "target": 23,
+    "ratio": 0.9565217391304348,
+    "solved": false,
+    "error": null,
+    "seconds": 19.33
+   },
+   {
+    "n": 10,
+    "submitted": 24,
+    "triples": 0,
+    "valid_points": 24,
+    "target": 26,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 19.34
+   },
+   {
+    "n": 11,
+    "submitted": 26,
+    "triples": 0,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 19.37
+   },
+   {
+    "n": 13,
+    "submitted": 30,
+    "triples": 0,
+    "valid_points": 30,
+    "target": 32,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.34
+   },
+   {
+    "n": 14,
+    "submitted": 32,
+    "triples": 0,
+    "valid_points": 32,
+    "target": 35,
+    "ratio": 0.9142857142857143,
+    "solved": false,
+    "error": null,
+    "seconds": 19.34
+   },
+   {
+    "n": 15,
+    "submitted": 34,
+    "triples": 0,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.35
+   }
+  ],
+  "usage": {
+   "input_tokens": 10697,
+   "output_tokens": 14743,
+   "model": "claude-opus-5-5"
+  }
+ },
+ {
+  "id": "g005",
+  "parent": "s0",
+  "idea": "Tabu search with numpy-maintained coplanarity counts per cell and per point. Every (remove point, add cell) swap is scored in one vectorized pass, warm-started from the best known set.",
+  "path": "runs\\20261003-012436\\programs\\g005.py",
+  "fitness": 0.9340667082514909,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 9,
+    "submitted": 22,
+    "triples": 0,
+    "valid_points": 22,
+    "target": 23,
+    "ratio": 0.9565217391304348,
+    "solved": false,
+    "error": null,
+    "seconds": 18.08
+   },
+   {
+    "n": 10,
+    "submitted": 24,
+    "triples": 0,
+    "valid_points": 24,
+    "target": 26,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 18.09
+   },
+   {
+    "n": 11,
+    "submitted": 26,
+    "triples": 0,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 18.09
+   },
+   {
+    "n": 13,
+    "submitted": 30,
+    "triples": 0,
+    "valid_points": 30,
+    "target": 32,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 18.11
+   },
+   {
+    "n": 14,
+    "submitted": 32,
+    "triples": 0,
+    "valid_points": 32,
+    "target": 35,
+    "ratio": 0.9142857142857143,
+    "solved": false,
+    "error": null,
+    "seconds": 18.12
+   },
+   {
+    "n": 15,
+    "submitted": 34,
+    "triples": 0,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 18.12
+   }
+  ],
+  "usage": {
+   "input_tokens": 3489,
+   "output_tokens": 14973,
+   "model": "claude-opus-5-5"
+  }
+ },
+ {
+  "id": "g006",
+  "parent": "s0",
+  "idea": "ILS on valid sets with numpy per-cell and per-point plane-cover counts: force cells in, evict conflicting points, regrow by min-kill greedy, and try (1,2)-swaps.",
+  "path": "runs\\20261003-012436\\programs\\g006.py",
+  "fitness": 0.0,
+  "solved": 0,
+  "error": "dunder attribute not allowed: __new__",
+  "results": [],
+  "usage": {
+   "input_tokens": 3630,
+   "output_tokens": 23410,
+   "model": "claude-opus-5-5"
+  }
+ },
+ {
+  "id": "g007",
+  "parent": "s0",
+  "idea": "Exact numpy plane-cover counts give, for each point, the cells it blocks alone. A gcd-normalised duplicate-normal test then searches (1,2) and (2,3) swaps on a tabu plateau with kicks, warm-started from `start`.",
+  "path": "runs\\20261003-012436\\programs\\g007.py",
+  "fitness": 0.9340667082514909,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 9,
+    "submitted": 22,
+    "triples": 0,
+    "valid_points": 22,
+    "target": 23,
+    "ratio": 0.9565217391304348,
+    "solved": false,
+    "error": null,
+    "seconds": 17.74
+   },
+   {
+    "n": 10,
+    "submitted": 24,
+    "triples": 0,
+    "valid_points": 24,
+    "target": 26,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 17.74
+   },
+   {
+    "n": 11,
+    "submitted": 26,
+    "triples": 0,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 17.73
+   },
+   {
+    "n": 13,
+    "submitted": 30,
+    "triples": 0,
+    "valid_points": 30,
+    "target": 32,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 17.75
+   },
+   {
+    "n": 14,
+    "submitted": 32,
+    "triples": 0,
+    "valid_points": 32,
+    "target": 35,
+    "ratio": 0.9142857142857143,
+    "solved": false,
+    "error": null,
+    "seconds": 17.81
+   },
+   {
+    "n": 15,
+    "submitted": 34,
+    "triples": 0,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 17.76
+   }
+  ],
+  "usage": {
+   "input_tokens": 3738,
+   "output_tokens": 23636,
+   "model": "claude-opus-5-5"
+  }
+ },
+ {
+  "id": "g008",
+  "parent": "g005",
+  "idea": "Destroy-and-repair search starting from the warm start. Remove 3\u20138 points (random, slab or ball), then do bounded exact DFS over freed cells (per-layer \u22643 caps) to add r+1 points; otherwise take a plateau swap.",
+  "path": "runs\\20261003-012436\\programs\\g008.py",
+  "fitness": 0.9340667082514909,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 9,
+    "submitted": 22,
+    "triples": 0,
+    "valid_points": 22,
+    "target": 23,
+    "ratio": 0.9565217391304348,
+    "solved": false,
+    "error": null,
+    "seconds": 17.49
+   },
+   {
+    "n": 10,
+    "submitted": 24,
+    "triples": 0,
+    "valid_points": 24,
+    "target": 26,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 17.48
+   },
+   {
+    "n": 11,
+    "submitted": 26,
+    "triples": 0,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 17.49
+   },
+   {
+    "n": 13,
+    "submitted": 30,
+    "triples": 0,
+    "valid_points": 30,
+    "target": 32,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 17.5
+   },
+   {
+    "n": 14,
+    "submitted": 32,
+    "triples": 0,
+    "valid_points": 32,
+    "target": 35,
+    "ratio": 0.9142857142857143,
+    "solved": false,
+    "error": null,
+    "seconds": 17.5
+   },
+   {
+    "n": 15,
+    "submitted": 34,
+    "triples": 0,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 17.52
+   }
+  ],
+  "usage": {
+   "input_tokens": 5470,
+   "output_tokens": 26739,
+   "model": "claude-opus-5-5"
+  }
+ },
+ {
+  "id": "g009",
+  "parent": "s0",
+  "idea": "Min-conflicts tabu search at k=best+1 with exact numpy counts of triple-planes through every cell, updated per swap, plus kicks that rebuild from the best set.",
+  "path": "runs\\20261003-012436\\programs\\g009.py",
+  "fitness": 0.9340667082514909,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 9,
+    "submitted": 22,
+    "triples": 0,
+    "valid_points": 22,
+    "target": 23,
+    "ratio": 0.9565217391304348,
+    "solved": false,
+    "error": null,
+    "seconds": 18.51
+   },
+   {
+    "n": 10,
+    "submitted": 24,
+    "triples": 0,
+    "valid_points": 24,
+    "target": 26,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 18.58
+   },
+   {
+    "n": 11,
+    "submitted": 26,
+    "triples": 0,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 18.52
+   },
+   {
+    "n": 13,
+    "submitted": 30,
+    "triples": 0,
+    "valid_points": 30,
+    "target": 32,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 18.52
+   },
+   {
+    "n": 14,
+    "submitted": 32,
+    "triples": 0,
+    "valid_points": 32,
+    "target": 35,
+    "ratio": 0.9142857142857143,
+    "solved": false,
+    "error": null,
+    "seconds": 18.58
+   },
+   {
+    "n": 15,
+    "submitted": 34,
+    "triples": 0,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 18.59
+   }
+  ],
+  "usage": {
+   "input_tokens": 3880,
+   "output_tokens": 10995,
+   "model": "claude-opus-5-5"
+  }
+ },
+ {
+  "id": "g010",
+  "parent": "g003",
+  "idea": "Cold restarts happen half the time and use a generic symmetry group (C2, S4 rotoreflection, C3 diagonal, D2 or none) for half the run; never return fewer points than `start`.",
+  "path": "runs\\20261003-012436\\programs\\g010.py",
+  "fitness": 0.9340667082514909,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 9,
+    "submitted": 22,
+    "triples": 0,
+    "valid_points": 22,
+    "target": 23,
+    "ratio": 0.9565217391304348,
+    "solved": false,
+    "error": null,
+    "seconds": 19.13
+   },
+   {
+    "n": 10,
+    "submitted": 24,
+    "triples": 0,
+    "valid_points": 24,
+    "target": 26,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 19.1
+   },
+   {
+    "n": 11,
+    "submitted": 26,
+    "triples": 0,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 19.11
+   },
+   {
+    "n": 13,
+    "submitted": 30,
+    "triples": 0,
+    "valid_points": 30,
+    "target": 32,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.1
+   },
+   {
+    "n": 14,
+    "submitted": 32,
+    "triples": 0,
+    "valid_points": 32,
+    "target": 35,
+    "ratio": 0.9142857142857143,
+    "solved": false,
+    "error": null,
+    "seconds": 19.11
+   },
+   {
+    "n": 15,
+    "submitted": 34,
+    "triples": 0,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.13
+   }
+  ],
+  "usage": {
+   "input_tokens": 11218,
+   "output_tokens": 15281,
+   "model": "claude-opus-5-5"
+  }
+ }
+]

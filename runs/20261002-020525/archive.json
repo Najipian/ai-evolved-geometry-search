@@ -1,0 +1,1700 @@
+[
+ {
+  "id": "s0",
+  "parent": null,
+  "idea": "seed: evolved_r2_g013.py",
+  "path": "D:\\Three points\\runs\\20261002-020525\\programs\\s0_evolved_r2_g013.py",
+  "fitness": 0.8682210018510328,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 56,
+    "triples": 0,
+    "valid_points": 56,
+    "target": 64,
+    "ratio": 0.875,
+    "solved": false,
+    "error": null,
+    "seconds": 20.04
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.06
+   },
+   {
+    "n": 36,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 72,
+    "ratio": 0.8888888888888888,
+    "solved": false,
+    "error": null,
+    "seconds": 20.09
+   },
+   {
+    "n": 38,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 76,
+    "ratio": 0.8947368421052632,
+    "solved": false,
+    "error": null,
+    "seconds": 20.14
+   },
+   {
+    "n": 40,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 80,
+    "ratio": 0.8,
+    "solved": false,
+    "error": null,
+    "seconds": 20.13
+   },
+   {
+    "n": 42,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 84,
+    "ratio": 0.8095238095238095,
+    "solved": false,
+    "error": null,
+    "seconds": 20.18
+   }
+  ],
+  "usage": null
+ },
+ {
+  "id": "g001",
+  "parent": "s0",
+  "idea": "Use simulated annealing over quarter-turn-symmetric configurations, modelled as 2-regular multigraphs, with fast per-orbit triple counting; then repair greedily and re-add free cells.",
+  "path": "runs\\20261002-020525\\programs\\g001.py",
+  "fitness": 0.8769064204629221,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 56,
+    "triples": 0,
+    "valid_points": 56,
+    "target": 64,
+    "ratio": 0.875,
+    "solved": false,
+    "error": null,
+    "seconds": 19.4
+   },
+   {
+    "n": 34,
+    "submitted": 61,
+    "triples": 0,
+    "valid_points": 61,
+    "target": 68,
+    "ratio": 0.8970588235294118,
+    "solved": false,
+    "error": null,
+    "seconds": 19.4
+   },
+   {
+    "n": 36,
+    "submitted": 63,
+    "triples": 0,
+    "valid_points": 63,
+    "target": 72,
+    "ratio": 0.875,
+    "solved": false,
+    "error": null,
+    "seconds": 19.41
+   },
+   {
+    "n": 38,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 76,
+    "ratio": 0.8947368421052632,
+    "solved": false,
+    "error": null,
+    "seconds": 19.42
+   },
+   {
+    "n": 40,
+    "submitted": 69,
+    "triples": 0,
+    "valid_points": 69,
+    "target": 80,
+    "ratio": 0.8625,
+    "solved": false,
+    "error": null,
+    "seconds": 19.45
+   },
+   {
+    "n": 42,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 84,
+    "ratio": 0.8571428571428571,
+    "solved": false,
+    "error": null,
+    "seconds": 19.48
+   }
+  ],
+  "usage": {
+   "input_tokens": 4902,
+   "output_tokens": 29789
+  }
+ },
+ {
+  "id": "g002",
+  "parent": "g001",
+  "idea": "Replace rot4 annealing with vectorized numpy tabu min-conflicts: first under 180\u00b0 symmetry, then without symmetry starting from the best symmetric state.",
+  "path": "runs\\20261002-020525\\programs\\g002.py",
+  "fitness": 0.8137708957852147,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 54,
+    "triples": 0,
+    "valid_points": 54,
+    "target": 64,
+    "ratio": 0.84375,
+    "solved": false,
+    "error": null,
+    "seconds": 20.37
+   },
+   {
+    "n": 34,
+    "submitted": 54,
+    "triples": 0,
+    "valid_points": 54,
+    "target": 68,
+    "ratio": 0.7941176470588235,
+    "solved": false,
+    "error": null,
+    "seconds": 20.4
+   },
+   {
+    "n": 36,
+    "submitted": 59,
+    "triples": 0,
+    "valid_points": 59,
+    "target": 72,
+    "ratio": 0.8194444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.38
+   },
+   {
+    "n": 38,
+    "submitted": 62,
+    "triples": 0,
+    "valid_points": 62,
+    "target": 76,
+    "ratio": 0.8157894736842105,
+    "solved": false,
+    "error": null,
+    "seconds": 20.39
+   },
+   {
+    "n": 40,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 80,
+    "ratio": 0.8,
+    "solved": false,
+    "error": null,
+    "seconds": 20.49
+   },
+   {
+    "n": 42,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 84,
+    "ratio": 0.8095238095238095,
+    "solved": false,
+    "error": null,
+    "seconds": 20.54
+   }
+  ],
+  "usage": {
+   "input_tokens": 8351,
+   "output_tokens": 25202
+  }
+ },
+ {
+  "id": "g003",
+  "parent": "g001",
+  "idea": "Spend half the time on quarter-turn annealing, then break symmetry with an asymmetric column-swap annealing from the best rot4 state. Steer it toward conflicting points, then repair.",
+  "path": "runs\\20261002-020525\\programs\\g003.py",
+  "fitness": 0.8627464545759823,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 53,
+    "triples": 0,
+    "valid_points": 53,
+    "target": 64,
+    "ratio": 0.828125,
+    "solved": false,
+    "error": null,
+    "seconds": 18.94
+   },
+   {
+    "n": 34,
+    "submitted": 61,
+    "triples": 0,
+    "valid_points": 61,
+    "target": 68,
+    "ratio": 0.8970588235294118,
+    "solved": false,
+    "error": null,
+    "seconds": 18.96
+   },
+   {
+    "n": 36,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 72,
+    "ratio": 0.8888888888888888,
+    "solved": false,
+    "error": null,
+    "seconds": 19.06
+   },
+   {
+    "n": 38,
+    "submitted": 65,
+    "triples": 0,
+    "valid_points": 65,
+    "target": 76,
+    "ratio": 0.8552631578947368,
+    "solved": false,
+    "error": null,
+    "seconds": 19.1
+   },
+   {
+    "n": 40,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 80,
+    "ratio": 0.85,
+    "solved": false,
+    "error": null,
+    "seconds": 19.15
+   },
+   {
+    "n": 42,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 84,
+    "ratio": 0.8571428571428571,
+    "solved": false,
+    "error": null,
+    "seconds": 19.21
+   }
+  ],
+  "usage": {
+   "input_tokens": 8485,
+   "output_tokens": 18270
+  }
+ },
+ {
+  "id": "g004",
+  "parent": "s0",
+  "idea": "Use a short symmetric backtracking phase, then grow its best partial with an asymmetric plateau local search that adds conflict-free cells, swaps cells, and perturbs.",
+  "path": "runs\\20261002-020525\\programs\\g004.py",
+  "fitness": 0.9211524266139204,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 59,
+    "triples": 0,
+    "valid_points": 59,
+    "target": 64,
+    "ratio": 0.921875,
+    "solved": false,
+    "error": null,
+    "seconds": 20.89
+   },
+   {
+    "n": 34,
+    "submitted": 62,
+    "triples": 0,
+    "valid_points": 62,
+    "target": 68,
+    "ratio": 0.9117647058823529,
+    "solved": false,
+    "error": null,
+    "seconds": 20.91
+   },
+   {
+    "n": 36,
+    "submitted": 67,
+    "triples": 0,
+    "valid_points": 67,
+    "target": 72,
+    "ratio": 0.9305555555555556,
+    "solved": false,
+    "error": null,
+    "seconds": 20.85
+   },
+   {
+    "n": 38,
+    "submitted": 70,
+    "triples": 0,
+    "valid_points": 70,
+    "target": 76,
+    "ratio": 0.9210526315789473,
+    "solved": false,
+    "error": null,
+    "seconds": 20.94
+   },
+   {
+    "n": 40,
+    "submitted": 74,
+    "triples": 0,
+    "valid_points": 74,
+    "target": 80,
+    "ratio": 0.925,
+    "solved": false,
+    "error": null,
+    "seconds": 20.91
+   },
+   {
+    "n": 42,
+    "submitted": 77,
+    "triples": 0,
+    "valid_points": 77,
+    "target": 84,
+    "ratio": 0.9166666666666666,
+    "solved": false,
+    "error": null,
+    "seconds": 20.91
+   }
+  ],
+  "usage": {
+   "input_tokens": 5322,
+   "output_tokens": 20806
+  }
+ },
+ {
+  "id": "g005",
+  "parent": "g004",
+  "idea": "Replace backtracking with a plateau/tabu local search over symmetry orbits (rot4, dia2, rot2), resumed round-robin; then grow the best asymmetrically.",
+  "path": "runs\\20261002-020525\\programs\\g005.py",
+  "fitness": 0.945478381411044,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 20.82
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.83
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.87
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 20.88
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 20.9
+   },
+   {
+    "n": 42,
+    "submitted": 80,
+    "triples": 0,
+    "valid_points": 80,
+    "target": 84,
+    "ratio": 0.9523809523809523,
+    "solved": false,
+    "error": null,
+    "seconds": 20.92
+   }
+  ],
+  "usage": {
+   "input_tokens": 7890,
+   "output_tokens": 14282
+  }
+ },
+ {
+  "id": "g006",
+  "parent": "g005",
+  "idea": "Keep the orbit tabu search, and add exact bitset DFS completion that keeps every row/column at two points. Run it on removed parts of near-solutions and from scratch.",
+  "path": "runs\\20261002-020525\\programs\\g006.py",
+  "fitness": 0.9292085401412026,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 20.67
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.69
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.71
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 20.68
+   },
+   {
+    "n": 40,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 80,
+    "ratio": 0.9,
+    "solved": false,
+    "error": null,
+    "seconds": 20.74
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 20.77
+   }
+  ],
+  "usage": {
+   "input_tokens": 8258,
+   "output_tokens": 23326
+  }
+ },
+ {
+  "id": "g007",
+  "parent": "g004",
+  "idea": "Use iterated local search on symmetry orbits (rot4 and dia2), with exact bitset forbidden-masks, exhaustive 1\u21922 and 2\u21923 swaps, forced-insert perturbations, then asymmetric repair.",
+  "path": "runs\\20261002-020525\\programs\\g007.py",
+  "fitness": 0.9558950480777106,
+  "solved": 1,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 64,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 6.83
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.23
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.24
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 20.25
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 20.26
+   },
+   {
+    "n": 42,
+    "submitted": 80,
+    "triples": 0,
+    "valid_points": 80,
+    "target": 84,
+    "ratio": 0.9523809523809523,
+    "solved": false,
+    "error": null,
+    "seconds": 20.25
+   }
+  ],
+  "usage": {
+   "input_tokens": 8174,
+   "output_tokens": 43644
+  }
+ },
+ {
+  "id": "g008",
+  "parent": "g004",
+  "idea": "Run an ILS on rot4 and dia2 orbits, tracking exact blocking counts and involvement per orbit. It uses exhaustive (1,2)-swaps, plateau swaps, forced inserts and kicks, round-robin, then asymmetric polish.",
+  "path": "runs\\20261002-020525\\programs\\g008.py",
+  "fitness": 0.945478381411044,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 20.3
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.3
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.3
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 20.28
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 20.32
+   },
+   {
+    "n": 42,
+    "submitted": 80,
+    "triples": 0,
+    "valid_points": 80,
+    "target": 84,
+    "ratio": 0.9523809523809523,
+    "solved": false,
+    "error": null,
+    "seconds": 20.31
+   }
+  ],
+  "usage": {
+   "input_tokens": 8331,
+   "output_tokens": 33877
+  }
+ },
+ {
+  "id": "g009",
+  "parent": "g007",
+  "idea": "In near-solution plateaus, use exact row-constrained DFS repair after targeted k-orbit removals, then refine the symmetric best under 180\u00b0 symmetry to fill single gaps.",
+  "path": "runs\\20261002-020525\\programs\\g009.py",
+  "fitness": 0.945478381411044,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 20.84
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.75
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.72
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 20.91
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 20.92
+   },
+   {
+    "n": 42,
+    "submitted": 80,
+    "triples": 0,
+    "valid_points": 80,
+    "target": 84,
+    "ratio": 0.9523809523809523,
+    "solved": false,
+    "error": null,
+    "seconds": 20.95
+   }
+  ],
+  "usage": {
+   "input_tokens": 11771,
+   "output_tokens": 25482
+  }
+ },
+ {
+  "id": "g010",
+  "parent": "g007",
+  "idea": "After a rot4/dia2 orbit ILS phase, refine near-solutions in the finer common subgroup rot2 (pairs), seeded from the best symmetric states, with seed-based restarts.",
+  "path": "runs\\20261002-020525\\programs\\g010.py",
+  "fitness": 0.945478381411044,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 20.54
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.55
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.59
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 20.59
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 20.57
+   },
+   {
+    "n": 42,
+    "submitted": 80,
+    "triples": 0,
+    "valid_points": 80,
+    "target": 84,
+    "ratio": 0.9523809523809523,
+    "solved": false,
+    "error": null,
+    "seconds": 20.57
+   }
+  ],
+  "usage": {
+   "input_tokens": 11765,
+   "output_tokens": 12614
+  }
+ },
+ {
+  "id": "g011",
+  "parent": "g007",
+  "idea": "Spend all time on rot4/dia2 orbit ILS, adding a row-constrained exact DFS endgame that repairs near-solutions through targeted 2- and 3-orbit removals.",
+  "path": "runs\\20261002-020525\\programs\\g011.py",
+  "fitness": 0.9292085401412026,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.99
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.01
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.0
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 20.04
+   },
+   {
+    "n": 40,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 80,
+    "ratio": 0.9,
+    "solved": false,
+    "error": null,
+    "seconds": 20.02
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 20.04
+   }
+  ],
+  "usage": {
+   "input_tokens": 11775,
+   "output_tokens": 26535
+  }
+ },
+ {
+  "id": "g012",
+  "parent": "g007",
+  "idea": "Add a tabu plateau walk of 1-for-1 orbit swaps, checking every 1\u21922 completion, for near-solutions. Drop the asymmetric phase so symmetric search gets all the time.",
+  "path": "runs\\20261002-020525\\programs\\g012.py",
+  "fitness": 0.945478381411044,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.76
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.81
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.78
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 19.8
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 19.85
+   },
+   {
+    "n": 42,
+    "submitted": 80,
+    "triples": 0,
+    "valid_points": 80,
+    "target": 84,
+    "ratio": 0.9523809523809523,
+    "solved": false,
+    "error": null,
+    "seconds": 19.83
+   }
+  ],
+  "usage": {
+   "input_tokens": 11776,
+   "output_tokens": 17964
+  }
+ },
+ {
+  "id": "g013",
+  "parent": "g007",
+  "idea": "Interleave g007's orbit ILS with randomised restart DFS over rot4/dia2 orbits. The DFS uses most-constrained-class branching, least-constraining-value ordering, failed-sibling exclusion and Luby budgets.",
+  "path": "runs\\20261002-020525\\programs\\g013.py",
+  "fitness": 0.9547376406703032,
+  "solved": 1,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.8
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.8
+   },
+   {
+    "n": 36,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 72,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 13.0
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 19.84
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 19.84
+   },
+   {
+    "n": 42,
+    "submitted": 80,
+    "triples": 0,
+    "valid_points": 80,
+    "target": 84,
+    "ratio": 0.9523809523809523,
+    "solved": false,
+    "error": null,
+    "seconds": 19.88
+   }
+  ],
+  "usage": {
+   "input_tokens": 11786,
+   "output_tokens": 17277
+  }
+ },
+ {
+  "id": "g014",
+  "parent": "g007",
+  "idea": "Run the existing orbit ILS briefly, then anneal over complete symmetric 2-per-line configurations, using numpy collinear-orbit-triple counts and structure-preserving rewiring moves.",
+  "path": "runs\\20261002-020525\\programs\\g014.py",
+  "fitness": 0.9292085401412026,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 20.84
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.79
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.88
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 20.89
+   },
+   {
+    "n": 40,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 80,
+    "ratio": 0.9,
+    "solved": false,
+    "error": null,
+    "seconds": 20.9
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 20.86
+   }
+  ],
+  "usage": {
+   "input_tokens": 11807,
+   "output_tokens": 55695
+  }
+ },
+ {
+  "id": "g015",
+  "parent": "g010",
+  "idea": "Interleave the orbit ILS with a fast restarting exact DFS over rot4/dia2 orbits. The DFS branches on the most constrained line class, using forward checking, sibling exclusion and Luby restarts.",
+  "path": "runs\\20261002-020525\\programs\\g015.py",
+  "fitness": 0.9519267941094567,
+  "solved": 1,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 64,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.82
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.69
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.69
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 19.71
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 19.73
+   },
+   {
+    "n": 42,
+    "submitted": 78,
+    "triples": 0,
+    "valid_points": 78,
+    "target": 84,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 19.75
+   }
+  ],
+  "usage": {
+   "input_tokens": 12453,
+   "output_tokens": 22789
+  }
+ },
+ {
+  "id": "g016",
+  "parent": "g007",
+  "idea": "Alternate the parent's orbit ILS with a widening beam search over symmetric orbits that keeps partial states with the best per-class candidate supply.",
+  "path": "runs\\20261002-020525\\programs\\g016.py",
+  "fitness": 0.9375418734745361,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 20.28
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.25
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.28
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 20.3
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 20.31
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 20.32
+   }
+  ],
+  "usage": {
+   "input_tokens": 11811,
+   "output_tokens": 30192
+  }
+ },
+ {
+  "id": "g017",
+  "parent": "g007",
+  "idea": "Interleave the parent's orbit ILS with a restarting DFS over rot4/dia2 orbits. The DFS uses dom/wdeg branching, line-supply forward checks, LCV ordering, sibling exclusion and Luby budgets.",
+  "path": "runs\\20261002-020525\\programs\\g017.py",
+  "fitness": 0.9375418734745361,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.83
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.82
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.8
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 19.81
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 19.86
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 19.86
+   }
+  ],
+  "usage": {
+   "input_tokens": 11771,
+   "output_tokens": 27606
+  }
+ },
+ {
+  "id": "g018",
+  "parent": "g013",
+  "idea": "Spend most time on the restart DFS and add forward checking: prune infeasible candidates, mark them failed, pass the child's branching class down, and vary noise more.",
+  "path": "runs\\20261002-020525\\programs\\g018.py",
+  "fitness": 0.9333752068078693,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.79
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.8
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.84
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 19.83
+   },
+   {
+    "n": 40,
+    "submitted": 74,
+    "triples": 0,
+    "valid_points": 74,
+    "target": 80,
+    "ratio": 0.925,
+    "solved": false,
+    "error": null,
+    "seconds": 19.86
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 19.88
+   }
+  ],
+  "usage": {
+   "input_tokens": 10613,
+   "output_tokens": 18381
+  }
+ },
+ {
+  "id": "g019",
+  "parent": "g005",
+  "idea": "Spend ~85% of the time on a bitset DFS over row/column-class demands for rot4 and dia2 orbits, with MRV, forward checking, LCV, sibling exclusion and Luby restarts.",
+  "path": "runs\\20261002-020525\\programs\\g019.py",
+  "fitness": 0.9292085401412026,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 20.62
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.62
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.64
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 20.73
+   },
+   {
+    "n": 40,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 80,
+    "ratio": 0.9,
+    "solved": false,
+    "error": null,
+    "seconds": 20.71
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 20.74
+   }
+  ],
+  "usage": {
+   "input_tokens": 8644,
+   "output_tokens": 26535
+  }
+ },
+ {
+  "id": "g020",
+  "parent": "g007",
+  "idea": "After the rot4/dia2 orbit ILS, re-encode the best configuration as half-turn (rot2) orbits and continue ILS there with finer granularity, seeded restarts, then asymmetric repair.",
+  "path": "runs\\20261002-020525\\programs\\g020.py",
+  "fitness": 0.945478381411044,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 20.77
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 20.8
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 20.78
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 20.83
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 20.81
+   },
+   {
+    "n": 42,
+    "submitted": 80,
+    "triples": 0,
+    "valid_points": 80,
+    "target": 84,
+    "ratio": 0.9523809523809523,
+    "solved": false,
+    "error": null,
+    "seconds": 20.79
+   }
+  ],
+  "usage": {
+   "input_tokens": 11786,
+   "output_tokens": 13883
+  }
+ }
+]

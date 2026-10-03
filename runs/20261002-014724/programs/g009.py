@@ -1,0 +1,420 @@
+# g009 (parent g001): Orbit DFS (rot4/dia2) that checks every child's feasibility and MRV one step ahead, ranks children by slack, then a greedy LNS fill.
+# Orbit backtracker with one-step lookahead child evaluation (feasibility + MRV + slack-aware
+# least-constraining ordering), Luby restarts alternating rot4/dia2 symmetry, then a greedy
+# asymmetric fill + small LNS on the best partial to maximise valid points.
+import time
+import random
+from math import gcd
+
+try:
+    _pc = int.bit_count
+except AttributeError:
+    def _pc(x):
+        return bin(x).count('1')
+
+
+class _Abort(Exception):
+    pass
+
+
+def _luby(i):
+    while True:
+        k = 1
+        while (1 << k) - 1 < i:
+            k += 1
+        if i == (1 << k) - 1:
+            return 1 << (k - 1)
+        i -= (1 << (k - 1)) - 1
+
+
+def _group_maps(n, name):
+    m = n - 1
+    idm = lambda x, y: (x, y)
+    r90 = lambda x, y: (y, m - x)
+    r180 = lambda x, y: (m - x, m - y)
+    r270 = lambda x, y: (m - y, x)
+    d1 = lambda x, y: (y, x)
+    d2 = lambda x, y: (m - y, m - x)
+    return {
+        'rot4': [idm, r90, r180, r270],
+        'dia2': [idm, r180, d1, d2],
+        'rot2': [idm, r180],
+        'dia1': [idm, d1],
+        'iden': [idm],
+    }[name]
+
+
+class _Model(object):
+    def __init__(self, n, name):
+        self.n = n
+        self.lcache = {}
+        maps = _group_maps(n, name)
+        orb_of = [-1] * (n * n)
+        seen = [False] * (n * n)
+        orbits = []
+        for x in range(n):
+            for y in range(n):
+                c = x * n + y
+                if seen[c]:
+                    continue
+                cells = sorted(set(f(x, y) for f in maps))
+                for (a, b) in cells:
+                    seen[a * n + b] = True
+                if self._valid(cells):
+                    oid = len(orbits)
+                    orbits.append(cells)
+                    for (a, b) in cells:
+                        orb_of[a * n + b] = oid
+        self.orb_of = orb_of
+        self.orbits = orbits
+        N = len(orbits)
+        self.N = N
+        self.ALL = (1 << N) - 1
+        self.size = [len(c) for c in orbits]
+        lm = [0] * (2 * n)
+        lm2 = [0] * (2 * n)
+        contrib = []
+        for oid, cells in enumerate(orbits):
+            cnt = {}
+            for (a, b) in cells:
+                cnt[a] = cnt.get(a, 0) + 1
+                cnt[n + b] = cnt.get(n + b, 0) + 1
+            bit = 1 << oid
+            lst = []
+            for idx, k in cnt.items():
+                lm[idx] |= bit
+                if k >= 2:
+                    lm2[idx] |= bit
+                lst.append((idx, k))
+            contrib.append(lst)
+        self.lm, self.lm2, self.contrib = lm, lm2, contrib
+        internal = [0] * N
+        for oid, cells in enumerate(orbits):
+            p = cells[0]
+            msk = 0
+            for q in cells[1:]:
+                msk |= self.line(p, q)
+            internal[oid] = msk & ~(1 << oid)
+        hits = [0] * N
+        for a in range(N):
+            m = internal[a]
+            while m:
+                low = m & -m
+                b = low.bit_length() - 1
+                m ^= low
+                hits[b] |= 1 << a
+        self.base = [(1 << a) | internal[a] | hits[a] for a in range(N)]
+        self.cache = [None] * (N * N)
+        parent = list(range(2 * n))
+
+        def find(u):
+            while parent[u] != u:
+                parent[u] = parent[parent[u]]
+                u = parent[u]
+            return u
+        for f in maps:
+            for r in range(n):
+                (x1, y1), (x2, y2) = f(r, 0), f(r, 1)
+                img = x1 if x1 == x2 else n + y1
+                parent[find(r)] = find(img)
+                (x1, y1), (x2, y2) = f(0, r), f(1, r)
+                img = x1 if x1 == x2 else n + y1
+                parent[find(n + r)] = find(img)
+        self.reps = sorted(set(find(i) for i in range(2 * n)))
+
+    def _valid(self, cells):
+        rc, cc = {}, {}
+        for (a, b) in cells:
+            rc[a] = rc.get(a, 0) + 1
+            cc[b] = cc.get(b, 0) + 1
+            if rc[a] > 2 or cc[b] > 2:
+                return False
+        L = len(cells)
+        for i in range(L):
+            ax, ay = cells[i]
+            for j in range(i + 1, L):
+                bx, by = cells[j]
+                for k in range(j + 1, L):
+                    cx, cy = cells[k]
+                    if (bx - ax) * (cy - ay) == (by - ay) * (cx - ax):
+                        return False
+        return True
+
+    def line(self, p, q):
+        n = self.n
+        px, py = p
+        dx, dy = q[0] - px, q[1] - py
+        g = gcd(abs(dx), abs(dy))
+        dx //= g
+        dy //= g
+        if dx < 0 or (dx == 0 and dy < 0):
+            dx, dy = -dx, -dy
+        x, y = px, py
+        while 0 <= x - dx < n and 0 <= y - dy < n:
+            x -= dx
+            y -= dy
+        key = (dx, dy, x, y)
+        lc = self.lcache
+        v = lc.get(key)
+        if v is not None:
+            return v
+        orb_of = self.orb_of
+        msk = 0
+        while 0 <= x < n and 0 <= y < n:
+            o = orb_of[x * n + y]
+            if o >= 0:
+                msk |= 1 << o
+            x += dx
+            y += dy
+        lc[key] = msk
+        return msk
+
+    def compat_slow(self, a, b):
+        p = self.orbits[a][0]
+        v = 0
+        for q in self.orbits[b]:
+            v |= self.line(p, q)
+        N = self.N
+        self.cache[a * N + b] = v
+        self.cache[b * N + a] = v
+        return v
+
+
+def _run(model, rng, budget, deadline, best, noise):
+    n = model.n
+    ALL = model.ALL
+    lm, lm2 = model.lm, model.lm2
+    contrib = model.contrib
+    base = model.base
+    size = model.size
+    cache = model.cache
+    N = model.N
+    orbits = model.orbits
+    cslow = model.compat_slow
+    target = 2 * n
+    reps = list(model.reps)
+    rng.shuffle(reps)
+    cnt = [0]
+    pc = _pc
+    tm = time.time
+    rnd = rng.random
+    keyf = lambda t: t[0]
+
+    def ev(nd, nc):
+        avail = ALL & ~nd
+        bestc = 1 << 30
+        bm = 0
+        bi = -1
+        for i in reps:
+            ci = nc[i]
+            if ci < 2:
+                m = avail & lm[i]
+                if not m:
+                    return None
+                c = pc(m)
+                if c == 1 and ci == 0 and not (m & lm2[i]):
+                    return None
+                if c < bestc:
+                    bestc = c
+                    bm = m
+                    bi = i
+        if bi < 0:
+            return None
+        return (pc(avail) + 2.0 * (bestc if bestc < 5 else 5) + rnd() * noise, bi, bm)
+
+    def rec(dead, counts, placed, npts, bi, bm):
+        c0 = cnt[0] + 1
+        cnt[0] = c0
+        if c0 > budget or ((c0 & 127) == 0 and tm() > deadline):
+            raise _Abort()
+        if npts > best[0]:
+            best[0] = npts
+            pts = []
+            for o in placed:
+                pts.extend(orbits[o])
+            best[1] = pts
+        lm2i = lm2[bi]
+        need2 = counts[bi] == 0
+        children = []
+        failed = 0
+        m = bm
+        while m:
+            low = m & -m
+            a = low.bit_length() - 1
+            m ^= low
+            nd = dead | base[a]
+            row = a * N
+            for b in placed:
+                v = cache[row + b]
+                if v is None:
+                    v = cslow(a, b)
+                nd |= v
+            nc = counts[:]
+            for idx, k in contrib[a]:
+                v = nc[idx] + k
+                nc[idx] = v
+                if v >= 2:
+                    nd |= lm[idx]
+                else:
+                    nd |= lm2[idx]
+            if npts + size[a] == target:
+                return placed + [a]
+            e = ev(nd, nc)
+            if e is None:
+                failed |= low
+                continue
+            children.append((e[0], a, nd, nc, e[1], e[2]))
+        if not children:
+            return None
+        avail = bm & ~failed
+        if need2 and not (avail & lm2i) and pc(avail) < 2:
+            return None
+        children.sort(key=keyf, reverse=True)
+        for sc, a, nd, nc, b2, m2 in children:
+            low = 1 << a
+            m2 &= ~failed
+            if m2:
+                placed.append(a)
+                r = rec(nd | failed, nc, placed, npts + size[a], b2, m2)
+                placed.pop()
+                if r:
+                    return r
+            failed |= low
+            avail &= ~low
+            if not avail:
+                break
+            if need2 and not (avail & lm2i) and pc(avail) < 2:
+                break
+        return None
+
+    try:
+        c0 = [0] * (2 * n)
+        e = ev(0, c0)
+        if e is None:
+            return None
+        res = rec(0, c0, [], 0, e[1], e[2])
+    except _Abort:
+        return None
+    if res:
+        pts = []
+        for o in res:
+            pts.extend(orbits[o])
+        return pts
+    return None
+
+
+# ---------------- greedy fill / LNS ----------------
+
+def _lkey(x1, y1, x2, y2):
+    dx = x2 - x1
+    dy = y2 - y1
+    g = gcd(abs(dx), abs(dy))
+    dx //= g
+    dy //= g
+    if dx < 0 or (dx == 0 and dy < 0):
+        dx, dy = -dx, -dy
+    return (dx, dy, dy * x1 - dx * y1)
+
+
+def _fill(n, S, rng):
+    S = list(S)
+    covered = set()
+    rowc = [0] * n
+    colc = [0] * n
+    L = len(S)
+    for i in range(L):
+        x1, y1 = S[i]
+        rowc[x1] += 1
+        colc[y1] += 1
+        for j in range(i + 1, L):
+            x2, y2 = S[j]
+            covered.add(_lkey(x1, y1, x2, y2))
+    inS = set(S)
+    cells = [(x, y) for x in range(n) for y in range(n) if (x, y) not in inS]
+    rng.shuffle(cells)
+    for (x, y) in cells:
+        if rowc[x] >= 2 or colc[y] >= 2:
+            continue
+        ok = True
+        keys = []
+        for (px, py) in S:
+            k = _lkey(x, y, px, py)
+            if k in covered:
+                ok = False
+                break
+            keys.append(k)
+        if not ok:
+            continue
+        for k in keys:
+            covered.add(k)
+        S.append((x, y))
+        rowc[x] += 1
+        colc[y] += 1
+    return S
+
+
+def _lns(n, init, rng, deadline):
+    cur = _fill(n, init, rng)
+    while time.time() < deadline and len(cur) < 2 * n:
+        S = cur[:]
+        k = rng.randint(1, 4)
+        for _ in range(min(k, len(S))):
+            S.pop(rng.randrange(len(S)))
+        S = _fill(n, S, rng)
+        if len(S) >= len(cur):
+            cur = S
+    return cur
+
+
+def construct(n, time_limit, seed):
+    t0 = time.time()
+    deadline = t0 + time_limit - 0.4
+    rng = random.Random(seed)
+    if n <= 0:
+        return []
+    if n == 1:
+        return [(0, 0)]
+    if n == 2:
+        return [(0, 0), (0, 1), (1, 0), (1, 1)]
+    if n == 3:
+        return [(0, 0), (0, 1), (1, 0), (1, 2), (2, 1), (2, 2)]
+    if n % 2 == 0:
+        names = ['rot4', 'dia2']
+        if n <= 14:
+            names.append('rot2')
+    else:
+        names = ['rot2', 'dia2', 'rot2', 'dia1']
+    if n <= 8:
+        names.append('iden')
+    if n <= 12:
+        bt_deadline = deadline
+    else:
+        bt_deadline = t0 + time_limit * 0.88
+    models = {}
+    counters = dict((nm, 0) for nm in names)
+    best = [0, []]
+    unit = max(40, 4 * n)
+    gi = 0
+    while time.time() < bt_deadline:
+        nm = names[gi % len(names)]
+        gi += 1
+        if nm not in models:
+            models[nm] = _Model(n, nm)
+        model = models[nm]
+        if model.N == 0:
+            continue
+        counters[nm] += 1
+        k = counters[nm]
+        budget = unit * _luby(k)
+        noise = 3.0 if (k % 4) else 12.0
+        res = _run(model, rng, budget, bt_deadline, best, noise)
+        if res:
+            return [(int(x), int(y)) for (x, y) in res]
+    init_pts = [(int(x), int(y)) for (x, y) in best[1]]
+    try:
+        res = _lns(n, init_pts, rng, deadline)
+    except Exception:
+        res = None
+    if res and len(res) >= len(init_pts):
+        return [(int(x), int(y)) for (x, y) in res]
+    return init_pts

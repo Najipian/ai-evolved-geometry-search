@@ -1,0 +1,392 @@
+[
+ {
+  "id": "parabola",
+  "parent": null,
+  "idea": "Erdos construction (x, x^2 mod p)",
+  "path": "D:\\Three points\\programs\\baseline_parabola.py",
+  "fitness": 0.44066119066119064,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 7,
+    "triples": 0,
+    "valid_points": 7,
+    "target": 20,
+    "ratio": 0.35,
+    "solved": false,
+    "error": null,
+    "seconds": 0.2
+   },
+   {
+    "n": 14,
+    "submitted": 13,
+    "triples": 0,
+    "valid_points": 13,
+    "target": 28,
+    "ratio": 0.4642857142857143,
+    "solved": false,
+    "error": null,
+    "seconds": 0.2
+   },
+   {
+    "n": 18,
+    "submitted": 17,
+    "triples": 0,
+    "valid_points": 17,
+    "target": 36,
+    "ratio": 0.4722222222222222,
+    "solved": false,
+    "error": null,
+    "seconds": 0.19
+   },
+   {
+    "n": 22,
+    "submitted": 19,
+    "triples": 0,
+    "valid_points": 19,
+    "target": 44,
+    "ratio": 0.4318181818181818,
+    "solved": false,
+    "error": null,
+    "seconds": 0.2
+   },
+   {
+    "n": 26,
+    "submitted": 23,
+    "triples": 0,
+    "valid_points": 23,
+    "target": 52,
+    "ratio": 0.4423076923076923,
+    "solved": false,
+    "error": null,
+    "seconds": 0.2
+   },
+   {
+    "n": 30,
+    "submitted": 29,
+    "triples": 0,
+    "valid_points": 29,
+    "target": 60,
+    "ratio": 0.48333333333333334,
+    "solved": false,
+    "error": null,
+    "seconds": 0.2
+   }
+  ],
+  "usage": null
+ },
+ {
+  "id": "greedy",
+  "parent": null,
+  "idea": "random greedy insertion",
+  "path": "D:\\Three points\\programs\\baseline_greedy.py",
+  "fitness": 0.867949642949643,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 19,
+    "triples": 0,
+    "valid_points": 19,
+    "target": 20,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 6.2
+   },
+   {
+    "n": 14,
+    "submitted": 25,
+    "triples": 0,
+    "valid_points": 25,
+    "target": 28,
+    "ratio": 0.8928571428571429,
+    "solved": false,
+    "error": null,
+    "seconds": 6.2
+   },
+   {
+    "n": 18,
+    "submitted": 31,
+    "triples": 0,
+    "valid_points": 31,
+    "target": 36,
+    "ratio": 0.8611111111111112,
+    "solved": false,
+    "error": null,
+    "seconds": 6.19
+   },
+   {
+    "n": 22,
+    "submitted": 37,
+    "triples": 0,
+    "valid_points": 37,
+    "target": 44,
+    "ratio": 0.8409090909090909,
+    "solved": false,
+    "error": null,
+    "seconds": 6.2
+   },
+   {
+    "n": 26,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 52,
+    "ratio": 0.8461538461538461,
+    "solved": false,
+    "error": null,
+    "seconds": 6.2
+   },
+   {
+    "n": 30,
+    "submitted": 49,
+    "triples": 0,
+    "valid_points": 49,
+    "target": 60,
+    "ratio": 0.8166666666666667,
+    "solved": false,
+    "error": null,
+    "seconds": 6.19
+   }
+  ],
+  "usage": null
+ },
+ {
+  "id": "annealing",
+  "parent": null,
+  "idea": "simulated annealing, two per row/column (evolution seed)",
+  "path": "D:\\Three points\\programs\\seed_annealing.py",
+  "fitness": 0.899912124912125,
+  "solved": 1,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 2,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 6.24
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 2,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 6.21
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 8,
+    "valid_points": 38,
+    "target": 44,
+    "ratio": 0.8636363636363636,
+    "solved": false,
+    "error": null,
+    "seconds": 6.19
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 11,
+    "valid_points": 44,
+    "target": 52,
+    "ratio": 0.8461538461538461,
+    "solved": false,
+    "error": null,
+    "seconds": 6.23
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 16,
+    "valid_points": 49,
+    "target": 60,
+    "ratio": 0.8166666666666667,
+    "solved": false,
+    "error": null,
+    "seconds": 6.27
+   }
+  ],
+  "usage": null
+ },
+ {
+  "id": "sym-anneal",
+  "parent": null,
+  "idea": "annealing restricted to half-turn / diagonal symmetry",
+  "path": "D:\\Three points\\programs\\symmetry_annealing.py",
+  "fitness": 0.9006956006956007,
+  "solved": 1,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 4.05
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 2,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 6.01
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 4,
+    "valid_points": 32,
+    "target": 36,
+    "ratio": 0.8888888888888888,
+    "solved": false,
+    "error": null,
+    "seconds": 6.05
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 8,
+    "valid_points": 38,
+    "target": 44,
+    "ratio": 0.8636363636363636,
+    "solved": false,
+    "error": null,
+    "seconds": 6.02
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 6,
+    "valid_points": 48,
+    "target": 52,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 6.0
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 22,
+    "valid_points": 48,
+    "target": 60,
+    "ratio": 0.8,
+    "solved": false,
+    "error": null,
+    "seconds": 6.06
+   }
+  ],
+  "usage": null
+ },
+ {
+  "id": "sym-backtrack",
+  "parent": null,
+  "idea": "half-turn symmetric backtracking with line marking (evolution seed)",
+  "path": "D:\\Three points\\programs\\symmetry_backtrack.py",
+  "fitness": 0.8217819217819219,
+  "solved": 2,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.31
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 5.73
+   },
+   {
+    "n": 18,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 36,
+    "ratio": 0.7777777777777778,
+    "solved": false,
+    "error": null,
+    "seconds": 5.96
+   },
+   {
+    "n": 22,
+    "submitted": 32,
+    "triples": 0,
+    "valid_points": 32,
+    "target": 44,
+    "ratio": 0.7272727272727273,
+    "solved": false,
+    "error": null,
+    "seconds": 6.01
+   },
+   {
+    "n": 26,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 52,
+    "ratio": 0.6923076923076923,
+    "solved": false,
+    "error": null,
+    "seconds": 6.02
+   },
+   {
+    "n": 30,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 60,
+    "ratio": 0.7333333333333333,
+    "solved": false,
+    "error": null,
+    "seconds": 5.98
+   }
+  ],
+  "usage": null
+ }
+]

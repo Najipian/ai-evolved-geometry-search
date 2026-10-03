@@ -1,0 +1,1778 @@
+[
+ {
+  "id": "s0",
+  "parent": null,
+  "idea": "seed: seed_annealing.py",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\s0_seed_annealing.py",
+  "fitness": 0.899912124912125,
+  "solved": 1,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.23
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 2,
+    "valid_points": 26,
+    "target": 28,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 6.15
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 2,
+    "valid_points": 34,
+    "target": 36,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 6.13
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 8,
+    "valid_points": 38,
+    "target": 44,
+    "ratio": 0.8636363636363636,
+    "solved": false,
+    "error": null,
+    "seconds": 6.17
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 11,
+    "valid_points": 44,
+    "target": 52,
+    "ratio": 0.8461538461538461,
+    "solved": false,
+    "error": null,
+    "seconds": 6.19
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 16,
+    "valid_points": 49,
+    "target": 60,
+    "ratio": 0.8166666666666667,
+    "solved": false,
+    "error": null,
+    "seconds": 6.16
+   }
+  ],
+  "usage": null
+ },
+ {
+  "id": "s1",
+  "parent": null,
+  "idea": "seed: symmetry_backtrack.py",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\s1_symmetry_backtrack.py",
+  "fitness": 0.8433436933436934,
+  "solved": 2,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.15
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 4.61
+   },
+   {
+    "n": 18,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 36,
+    "ratio": 0.7777777777777778,
+    "solved": false,
+    "error": null,
+    "seconds": 5.84
+   },
+   {
+    "n": 22,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 44,
+    "ratio": 0.8181818181818182,
+    "solved": false,
+    "error": null,
+    "seconds": 5.85
+   },
+   {
+    "n": 26,
+    "submitted": 38,
+    "triples": 0,
+    "valid_points": 38,
+    "target": 52,
+    "ratio": 0.7307692307692307,
+    "solved": false,
+    "error": null,
+    "seconds": 5.91
+   },
+   {
+    "n": 30,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 60,
+    "ratio": 0.7333333333333333,
+    "solved": false,
+    "error": null,
+    "seconds": 5.86
+   }
+  ],
+  "usage": null
+ },
+ {
+  "id": "g001",
+  "parent": "s1",
+  "idea": "Use bitboard backtracking with quarter-turn and diagonal-mirror symmetry for even n, cached line masks, and random restarts with growing budgets.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g001.py",
+  "fitness": 0.9462703962703962,
+  "solved": 3,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.16
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.68
+   },
+   {
+    "n": 22,
+    "submitted": 42,
+    "triples": 0,
+    "valid_points": 42,
+    "target": 44,
+    "ratio": 0.9545454545454546,
+    "solved": false,
+    "error": null,
+    "seconds": 5.48
+   },
+   {
+    "n": 26,
+    "submitted": 48,
+    "triples": 0,
+    "valid_points": 48,
+    "target": 52,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 5.49
+   },
+   {
+    "n": 30,
+    "submitted": 48,
+    "triples": 0,
+    "valid_points": 48,
+    "target": 60,
+    "ratio": 0.8,
+    "solved": false,
+    "error": null,
+    "seconds": 5.5
+   }
+  ],
+  "usage": {
+   "input_tokens": 3190,
+   "output_tokens": 14487
+  }
+ },
+ {
+  "id": "g002",
+  "parent": "g001",
+  "idea": "Search in orbit-representative space so one cached line lookup covers a whole symmetry orbit. Rows/columns become index constraints, and line masks are cached across restarts.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g002.py",
+  "fitness": 0.9871794871794872,
+  "solved": 5,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.47
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.5
+   },
+   {
+    "n": 26,
+    "submitted": 48,
+    "triples": 0,
+    "valid_points": 48,
+    "target": 52,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 5.57
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.83
+   }
+  ],
+  "usage": {
+   "input_tokens": 3975,
+   "output_tokens": 19916
+  }
+ },
+ {
+  "id": "g003",
+  "parent": "g002",
+  "idea": "Cache orbit-to-orbit compatibility masks so each placement does one lookup per placed orbit instead of one per placed point, and use more of the time budget.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g003.py",
+  "fitness": 0.9871794871794872,
+  "solved": 5,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.15
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.43
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.01
+   },
+   {
+    "n": 26,
+    "submitted": 48,
+    "triples": 0,
+    "valid_points": 48,
+    "target": 52,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 5.74
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.55
+   }
+  ],
+  "usage": {
+   "input_tokens": 4977,
+   "output_tokens": 10013
+  }
+ },
+ {
+  "id": "g004",
+  "parent": "g002",
+  "idea": "Least-constraining value ordering with noise, plus a pruning check that enough orbits remain. Alternates with the plain shuffled-order restarts as a hedge.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g004.py",
+  "fitness": 0.964957264957265,
+  "solved": 4,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.14
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.39
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 5.29
+   },
+   {
+    "n": 26,
+    "submitted": 48,
+    "triples": 0,
+    "valid_points": 48,
+    "target": 52,
+    "ratio": 0.9230769230769231,
+    "solved": false,
+    "error": null,
+    "seconds": 5.7
+   },
+   {
+    "n": 30,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 60,
+    "ratio": 0.8666666666666667,
+    "solved": false,
+    "error": null,
+    "seconds": 5.74
+   }
+  ],
+  "usage": {
+   "input_tokens": 5107,
+   "output_tokens": 9348
+  }
+ },
+ {
+  "id": "g005",
+  "parent": "s0",
+  "idea": "Bitmask backtracking over symmetry orbits, rotating between quarter-turn, two-diagonal and half-turn groups, with lazy orbit-pair line caches and Luby-scheduled restarts.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g005.py",
+  "fitness": 0.9888888888888889,
+  "solved": 5,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.14
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.87
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.5
+   },
+   {
+    "n": 30,
+    "submitted": 56,
+    "triples": 0,
+    "valid_points": 56,
+    "target": 60,
+    "ratio": 0.9333333333333333,
+    "solved": false,
+    "error": null,
+    "seconds": 5.73
+   }
+  ],
+  "usage": {
+   "input_tokens": 2969,
+   "output_tokens": 15660
+  }
+ },
+ {
+  "id": "g006",
+  "parent": "g005",
+  "idea": "Add need-aware forward checking. A line needing two points with one single-contributing orbit left is pruned, and branching stops once the chosen line becomes unfillable.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g006.py",
+  "fitness": 1.0,
+  "solved": 6,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.14
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.17
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.37
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.19
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.65
+   }
+  ],
+  "usage": {
+   "input_tokens": 5119,
+   "output_tokens": 6994
+  }
+ },
+ {
+  "id": "g007",
+  "parent": "g001",
+  "idea": "Backtrack over symmetry orbits (quarter-turn, diagonal pair, half-turn) with cached orbit-pair line masks, row/column forward checking, sibling exclusion, and Luby restarts.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g007.py",
+  "fitness": 0.9888888888888889,
+  "solved": 5,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.15
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.18
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.23
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.82
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.3
+   },
+   {
+    "n": 30,
+    "submitted": 56,
+    "triples": 0,
+    "valid_points": 56,
+    "target": 60,
+    "ratio": 0.9333333333333333,
+    "solved": false,
+    "error": null,
+    "seconds": 5.6
+   }
+  ],
+  "usage": {
+   "input_tokens": 4650,
+   "output_tokens": 15359
+  }
+ },
+ {
+  "id": "g008",
+  "parent": "g006",
+  "idea": "Keep the orbit backtracker but break ties for the most-constrained line in favour of lines still needing two points, which tightens branching.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g008.py",
+  "fitness": 0.9888888888888889,
+  "solved": 5,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.12
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.14
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.16
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.11
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 3.99
+   },
+   {
+    "n": 30,
+    "submitted": 56,
+    "triples": 0,
+    "valid_points": 56,
+    "target": 60,
+    "ratio": 0.9333333333333333,
+    "solved": false,
+    "error": null,
+    "seconds": 5.76
+   }
+  ],
+  "usage": {
+   "input_tokens": 5508,
+   "output_tokens": 5652
+  }
+ },
+ {
+  "id": "g009",
+  "parent": "g006",
+  "idea": "Keep the parent's backtracker but give quarter-turn and two-diagonal symmetries more restart slots than plain half-turn for even n, and precompute per-orbit exclusion masks.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g009.py",
+  "fitness": 0.9777777777777779,
+  "solved": 5,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.16
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.17
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.68
+   },
+   {
+    "n": 30,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 60,
+    "ratio": 0.8666666666666667,
+    "solved": false,
+    "error": null,
+    "seconds": 5.77
+   }
+  ],
+  "usage": {
+   "input_tokens": 5536,
+   "output_tokens": 5715
+  }
+ },
+ {
+  "id": "g010",
+  "parent": "g006",
+  "idea": "Keep the parent's orbit backtracker. Replace the dict compatibility cache with a flat list and add a cheap capacity prune on remaining points.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g010.py",
+  "fitness": 1.0,
+  "solved": 6,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.14
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.19
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.41
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.03
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.51
+   }
+  ],
+  "usage": {
+   "input_tokens": 5546,
+   "output_tokens": 5786
+  }
+ },
+ {
+  "id": "g011",
+  "parent": "g008",
+  "idea": "Make the dead two-candidate check real: a line needing two points with exactly two candidates must accept both, so prune on collisions or overflows.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g011.py",
+  "fitness": 0.9888888888888889,
+  "solved": 5,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.15
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.16
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.21
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.22
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.75
+   },
+   {
+    "n": 30,
+    "submitted": 56,
+    "triples": 0,
+    "valid_points": 56,
+    "target": 60,
+    "ratio": 0.9333333333333333,
+    "solved": false,
+    "error": null,
+    "seconds": 5.79
+   }
+  ],
+  "usage": {
+   "input_tokens": 5793,
+   "output_tokens": 6806
+  }
+ },
+ {
+  "id": "g012",
+  "parent": "g006",
+  "idea": "Keep the proven orbit backtracker unchanged and make it faster: a flat compatibility cache, precomputed per-orbit exclusion masks, and fewer timer checks.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g012.py",
+  "fitness": 1.0,
+  "solved": 6,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.12
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.14
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.16
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.37
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.75
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.23
+   }
+  ],
+  "usage": {
+   "input_tokens": 5533,
+   "output_tokens": 4471
+  }
+ },
+ {
+  "id": "g013",
+  "parent": "g006",
+  "idea": "Keep the proven orbit backtracker and its search order, but speed it up with a flat compatibility cache, precomputed exclusion masks and fewer row copies.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g013.py",
+  "fitness": 1.0,
+  "solved": 6,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.12
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.16
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.43
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.94
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.43
+   }
+  ],
+  "usage": {
+   "input_tokens": 5538,
+   "output_tokens": 4374
+  }
+ },
+ {
+  "id": "g014",
+  "parent": "g006",
+  "idea": "Keep the proven orbit backtracker and its search order unchanged, and speed it up with a flat symmetric compatibility cache and an inlined lookup.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g014.py",
+  "fitness": 1.0,
+  "solved": 6,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.12
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.15
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.36
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.9
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.4
+   }
+  ],
+  "usage": {
+   "input_tokens": 5521,
+   "output_tokens": 4554
+  }
+ },
+ {
+  "id": "g015",
+  "parent": "g012",
+  "idea": "Keep the proven orbit backtracker and add a cheap capacity prune: abandon a branch when the remaining orbits cannot supply enough points.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g015.py",
+  "fitness": 1.0,
+  "solved": 6,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.14
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.19
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.38
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.75
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.25
+   }
+  ],
+  "usage": {
+   "input_tokens": 5603,
+   "output_tokens": 4655
+  }
+ },
+ {
+  "id": "g016",
+  "parent": "g014",
+  "idea": "Keep the proven orbit backtracker and add a size-weighted capacity prune: abandon a branch when the remaining open orbits cannot supply enough points.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g016.py",
+  "fitness": 1.0,
+  "solved": 6,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.12
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.2
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.36
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.84
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.36
+   }
+  ],
+  "usage": {
+   "input_tokens": 5552,
+   "output_tokens": 4382
+  }
+ },
+ {
+  "id": "g017",
+  "parent": "g010",
+  "idea": "Keep the proven orbit backtracker and search order; replace the capacity bound with an exact size-weighted one, and precompute per-orbit exclusion masks.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g017.py",
+  "fitness": 1.0,
+  "solved": 6,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.14
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.16
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.36
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.82
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.3
+   }
+  ],
+  "usage": {
+   "input_tokens": 5627,
+   "output_tokens": 4547
+  }
+ },
+ {
+  "id": "g018",
+  "parent": "g014",
+  "idea": "Keep the proven orbit backtracker and search order, precompute combined per-orbit exclusion masks, and hoist lookups out of the hot loop.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g018.py",
+  "fitness": 1.0,
+  "solved": 6,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.16
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.38
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.78
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.26
+   }
+  ],
+  "usage": {
+   "input_tokens": 5551,
+   "output_tokens": 4058
+  }
+ },
+ {
+  "id": "g019",
+  "parent": "g006",
+  "idea": "Keep the proven orbit backtracker and its search order, and speed it up with precomputed per-orbit exclusion masks and an inlined compatibility-cache lookup.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g019.py",
+  "fitness": 1.0,
+  "solved": 6,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.14
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.17
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.44
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.4
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.8
+   }
+  ],
+  "usage": {
+   "input_tokens": 5496,
+   "output_tokens": 4017
+  }
+ },
+ {
+  "id": "g020",
+  "parent": "g006",
+  "idea": "Keep the proven orbit backtracker and search order unchanged; add precomputed per-orbit exclusion masks and a flat symmetric compatibility cache for speed.",
+  "path": "D:\\Three points\\runs\\20261001-215923\\programs\\g020.py",
+  "fitness": 1.0,
+  "solved": 6,
+  "error": null,
+  "results": [
+   {
+    "n": 10,
+    "submitted": 20,
+    "triples": 0,
+    "valid_points": 20,
+    "target": 20,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.12
+   },
+   {
+    "n": 14,
+    "submitted": 28,
+    "triples": 0,
+    "valid_points": 28,
+    "target": 28,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.13
+   },
+   {
+    "n": 18,
+    "submitted": 36,
+    "triples": 0,
+    "valid_points": 36,
+    "target": 36,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.16
+   },
+   {
+    "n": 22,
+    "submitted": 44,
+    "triples": 0,
+    "valid_points": 44,
+    "target": 44,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 0.36
+   },
+   {
+    "n": 26,
+    "submitted": 52,
+    "triples": 0,
+    "valid_points": 52,
+    "target": 52,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 1.76
+   },
+   {
+    "n": 30,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 60,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 2.28
+   }
+  ],
+  "usage": {
+   "input_tokens": 5507,
+   "output_tokens": 4245
+  }
+ }
+]

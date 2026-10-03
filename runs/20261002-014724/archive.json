@@ -1,0 +1,1309 @@
+[
+ {
+  "id": "s0",
+  "parent": null,
+  "idea": "seed: evolved_r2_g013.py",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\s0_evolved_r2_g013.py",
+  "fitness": 0.8682210018510328,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 56,
+    "triples": 0,
+    "valid_points": 56,
+    "target": 64,
+    "ratio": 0.875,
+    "solved": false,
+    "error": null,
+    "seconds": 19.95
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.96
+   },
+   {
+    "n": 36,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 72,
+    "ratio": 0.8888888888888888,
+    "solved": false,
+    "error": null,
+    "seconds": 20.01
+   },
+   {
+    "n": 38,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 76,
+    "ratio": 0.8947368421052632,
+    "solved": false,
+    "error": null,
+    "seconds": 20.08
+   },
+   {
+    "n": 40,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 80,
+    "ratio": 0.8,
+    "solved": false,
+    "error": null,
+    "seconds": 20.13
+   },
+   {
+    "n": 42,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 84,
+    "ratio": 0.8095238095238095,
+    "solved": false,
+    "error": null,
+    "seconds": 20.14
+   }
+  ],
+  "usage": null
+ },
+ {
+  "id": "g001",
+  "parent": "s0",
+  "idea": "Keep the symmetric orbit backtracker for 45% of the time, then run a numpy tabu min-conflicts search seeded from its best partial to add valid points.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g001.py",
+  "fitness": 0.9112600230150539,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 58,
+    "triples": 0,
+    "valid_points": 58,
+    "target": 64,
+    "ratio": 0.90625,
+    "solved": false,
+    "error": null,
+    "seconds": 19.85
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.85
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.91
+   },
+   {
+    "n": 38,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 76,
+    "ratio": 0.8947368421052632,
+    "solved": false,
+    "error": null,
+    "seconds": 19.93
+   },
+   {
+    "n": 40,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 80,
+    "ratio": 0.9,
+    "solved": false,
+    "error": null,
+    "seconds": 19.94
+   },
+   {
+    "n": 42,
+    "submitted": 74,
+    "triples": 0,
+    "valid_points": 74,
+    "target": 84,
+    "ratio": 0.8809523809523809,
+    "solved": false,
+    "error": null,
+    "seconds": 19.97
+   }
+  ],
+  "usage": {
+   "input_tokens": 4902,
+   "output_tokens": 21620
+  }
+ },
+ {
+  "id": "g002",
+  "parent": "g001",
+  "idea": "Replace backtracking with exact-delta numpy tabu search over symmetric orbits (quarter turn and half turn), then an unrestricted polish phase and a greedy repair.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g002.py",
+  "fitness": 0.9100199436499746,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 56,
+    "triples": 0,
+    "valid_points": 56,
+    "target": 64,
+    "ratio": 0.875,
+    "solved": false,
+    "error": null,
+    "seconds": 19.72
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.69
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.7
+   },
+   {
+    "n": 38,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 76,
+    "ratio": 0.8947368421052632,
+    "solved": false,
+    "error": null,
+    "seconds": 19.73
+   },
+   {
+    "n": 40,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 80,
+    "ratio": 0.9,
+    "solved": false,
+    "error": null,
+    "seconds": 19.73
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 19.74
+   }
+  ],
+  "usage": {
+   "input_tokens": 6943,
+   "output_tokens": 35495
+  }
+ },
+ {
+  "id": "g003",
+  "parent": "g001",
+  "idea": "Replace backtracking with a fast full-grid annealer. It keeps two points per row and column via rook swaps, scores moves in O(1) from cached tables, then repairs greedily.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g003.py",
+  "fitness": 0.8830241709256802,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 57,
+    "triples": 0,
+    "valid_points": 57,
+    "target": 64,
+    "ratio": 0.890625,
+    "solved": false,
+    "error": null,
+    "seconds": 20.26
+   },
+   {
+    "n": 34,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 68,
+    "ratio": 0.8823529411764706,
+    "solved": false,
+    "error": null,
+    "seconds": 20.32
+   },
+   {
+    "n": 36,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 72,
+    "ratio": 0.8888888888888888,
+    "solved": false,
+    "error": null,
+    "seconds": 20.31
+   },
+   {
+    "n": 38,
+    "submitted": 66,
+    "triples": 0,
+    "valid_points": 66,
+    "target": 76,
+    "ratio": 0.868421052631579,
+    "solved": false,
+    "error": null,
+    "seconds": 20.32
+   },
+   {
+    "n": 40,
+    "submitted": 70,
+    "triples": 0,
+    "valid_points": 70,
+    "target": 80,
+    "ratio": 0.875,
+    "solved": false,
+    "error": null,
+    "seconds": 20.33
+   },
+   {
+    "n": 42,
+    "submitted": 75,
+    "triples": 0,
+    "valid_points": 75,
+    "target": 84,
+    "ratio": 0.8928571428571429,
+    "solved": false,
+    "error": null,
+    "seconds": 20.32
+   }
+  ],
+  "usage": {
+   "input_tokens": 7080,
+   "output_tokens": 43983
+  }
+ },
+ {
+  "id": "g004",
+  "parent": "s0",
+  "idea": "Replace backtracking with an ARW-style local search for maximum independent sets over symmetric orbits. It runs quarter-turn, then diagonal, then half-turn, then free-cell phases, each seeded hierarchically, with numpy blocker counts.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g004.py",
+  "fitness": 0.945478381411044,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.75
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.76
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.78
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 19.76
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 19.78
+   },
+   {
+    "n": 42,
+    "submitted": 80,
+    "triples": 0,
+    "valid_points": 80,
+    "target": 84,
+    "ratio": 0.9523809523809523,
+    "solved": false,
+    "error": null,
+    "seconds": 19.79
+   }
+  ],
+  "usage": {
+   "input_tokens": 5309,
+   "output_tokens": 28800
+  }
+ },
+ {
+  "id": "g005",
+  "parent": "g004",
+  "idea": "Use randomized DFS over quarter-turn and diagonal orbits with row-degree forward checking and bitmask collinearity. Luby restarts drive it, with ARW-ILS as fallback.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g005.py",
+  "fitness": 0.9506867147443773,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 62,
+    "triples": 0,
+    "valid_points": 62,
+    "target": 64,
+    "ratio": 0.96875,
+    "solved": false,
+    "error": null,
+    "seconds": 12.25
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.25
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.25
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 19.29
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 19.31
+   },
+   {
+    "n": 42,
+    "submitted": 80,
+    "triples": 0,
+    "valid_points": 80,
+    "target": 84,
+    "ratio": 0.9523809523809523,
+    "solved": false,
+    "error": null,
+    "seconds": 19.37
+   }
+  ],
+  "usage": {
+   "input_tokens": 6319,
+   "output_tokens": 26993
+  }
+ },
+ {
+  "id": "g006",
+  "parent": "g005",
+  "idea": "Short DFS seeding, then tabu search over full quarter-turn cycle covers. Moves are 2-opt edge swaps that minimise collinear triples, scored by bitmask deltas with numpy counts.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g006.py",
+  "fitness": 0.8977942200271922,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.2
+   },
+   {
+    "n": 34,
+    "submitted": 58,
+    "triples": 0,
+    "valid_points": 58,
+    "target": 68,
+    "ratio": 0.8529411764705882,
+    "solved": false,
+    "error": null,
+    "seconds": 19.26
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.29
+   },
+   {
+    "n": 38,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 76,
+    "ratio": 0.8947368421052632,
+    "solved": false,
+    "error": null,
+    "seconds": 19.38
+   },
+   {
+    "n": 40,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 80,
+    "ratio": 0.9,
+    "solved": false,
+    "error": null,
+    "seconds": 19.36
+   },
+   {
+    "n": 42,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 84,
+    "ratio": 0.8571428571428571,
+    "solved": false,
+    "error": null,
+    "seconds": 19.41
+   }
+  ],
+  "usage": {
+   "input_tokens": 8993,
+   "output_tokens": 41757
+  }
+ },
+ {
+  "id": "g007",
+  "parent": "g003",
+  "idea": "Randomised DFS over rot4, dia2 and full-D4 orbits. Precomputed orbit-pair conflict bitmasks give exact forward checking. Uses MRV, least-constraining-value ordering, Luby restarts and a greedy fill.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g007.py",
+  "fitness": 0.9232474568774878,
+  "solved": 1,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 56,
+    "triples": 0,
+    "valid_points": 56,
+    "target": 64,
+    "ratio": 0.875,
+    "solved": false,
+    "error": null,
+    "seconds": 19.77
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.77
+   },
+   {
+    "n": 36,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 72,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 15.57
+   },
+   {
+    "n": 38,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 76,
+    "ratio": 0.8947368421052632,
+    "solved": false,
+    "error": null,
+    "seconds": 19.8
+   },
+   {
+    "n": 40,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 80,
+    "ratio": 0.9,
+    "solved": false,
+    "error": null,
+    "seconds": 19.81
+   },
+   {
+    "n": 42,
+    "submitted": 78,
+    "triples": 0,
+    "valid_points": 78,
+    "target": 84,
+    "ratio": 0.9285714285714286,
+    "solved": false,
+    "error": null,
+    "seconds": 19.76
+   }
+  ],
+  "usage": {
+   "input_tokens": 5783,
+   "output_tokens": 36829
+  }
+ },
+ {
+  "id": "g008",
+  "parent": "g001",
+  "idea": "Symmetric orbit DFS that tries asymmetric exact completion at deep dead ends, then full-grid numpy large-neighbourhood search. LNS forces in blocked cells and exactly repairs.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g008.py",
+  "fitness": 0.945478381411044,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 64,
+    "ratio": 0.9375,
+    "solved": false,
+    "error": null,
+    "seconds": 19.78
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.81
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.81
+   },
+   {
+    "n": 38,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 76,
+    "ratio": 0.9473684210526315,
+    "solved": false,
+    "error": null,
+    "seconds": 19.86
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 19.81
+   },
+   {
+    "n": 42,
+    "submitted": 80,
+    "triples": 0,
+    "valid_points": 80,
+    "target": 84,
+    "ratio": 0.9523809523809523,
+    "solved": false,
+    "error": null,
+    "seconds": 19.84
+   }
+  ],
+  "usage": {
+   "input_tokens": 7836,
+   "output_tokens": 34832
+  }
+ },
+ {
+  "id": "g009",
+  "parent": "g001",
+  "idea": "Orbit DFS (rot4/dia2) that checks every child's feasibility and MRV one step ahead, ranks children by slack, then a greedy LNS fill.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g009.py",
+  "fitness": 0.9208526319884679,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 58,
+    "triples": 0,
+    "valid_points": 58,
+    "target": 64,
+    "ratio": 0.90625,
+    "solved": false,
+    "error": null,
+    "seconds": 19.84
+   },
+   {
+    "n": 34,
+    "submitted": 62,
+    "triples": 0,
+    "valid_points": 62,
+    "target": 68,
+    "ratio": 0.9117647058823529,
+    "solved": false,
+    "error": null,
+    "seconds": 19.86
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.86
+   },
+   {
+    "n": 38,
+    "submitted": 69,
+    "triples": 0,
+    "valid_points": 69,
+    "target": 76,
+    "ratio": 0.9078947368421053,
+    "solved": false,
+    "error": null,
+    "seconds": 19.91
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 19.87
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 19.91
+   }
+  ],
+  "usage": {
+   "input_tokens": 7890,
+   "output_tokens": 15839
+  }
+ },
+ {
+  "id": "g010",
+  "parent": "g007",
+  "idea": "Keep the rot4/dia2 orbit DFS for exact solutions. Add an ARW-style orbit iterated local search, then a numpy full-grid tabu ILS to polish partials.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g010.py",
+  "fitness": 0.929927351057382,
+  "solved": 1,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 64,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 4.58
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 15.0
+   },
+   {
+    "n": 36,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 72,
+    "ratio": 0.8888888888888888,
+    "solved": false,
+    "error": null,
+    "seconds": 15.01
+   },
+   {
+    "n": 38,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 76,
+    "ratio": 0.8947368421052632,
+    "solved": false,
+    "error": null,
+    "seconds": 15.02
+   },
+   {
+    "n": 40,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 80,
+    "ratio": 0.95,
+    "solved": false,
+    "error": null,
+    "seconds": 15.03
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 15.05
+   }
+  ],
+  "usage": {
+   "input_tokens": 6264,
+   "output_tokens": 27233
+  }
+ },
+ {
+  "id": "g011",
+  "parent": "g010",
+  "idea": "Spend half the time on a faster rot4/dia2 orbit DFS, then orbit ILS; exactly complete near-full partials asymmetrically on deficit row/column cells.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g011.py",
+  "fitness": 0.0,
+  "solved": 0,
+  "error": "dunder attribute not allowed: __getitem__",
+  "results": [],
+  "usage": {
+   "input_tokens": 9999,
+   "output_tokens": 26290
+  }
+ },
+ {
+  "id": "g012",
+  "parent": "g010",
+  "idea": "Keep the rot4/dia2 orbit DFS for exact solutions, but replace the weak orbit and grid ILS with an asymmetric min-conflicts tabu search. It minimises collinear triples, repairs by greedy deletion, then refills.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g012.py",
+  "fitness": 0.9053241764542074,
+  "solved": 1,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 64,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 8.0
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.51
+   },
+   {
+    "n": 36,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 72,
+    "ratio": 0.8888888888888888,
+    "solved": false,
+    "error": null,
+    "seconds": 19.57
+   },
+   {
+    "n": 38,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 76,
+    "ratio": 0.8947368421052632,
+    "solved": false,
+    "error": null,
+    "seconds": 19.56
+   },
+   {
+    "n": 40,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 80,
+    "ratio": 0.85,
+    "solved": false,
+    "error": null,
+    "seconds": 19.56
+   },
+   {
+    "n": 42,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 84,
+    "ratio": 0.8571428571428571,
+    "solved": false,
+    "error": null,
+    "seconds": 19.6
+   }
+  ],
+  "usage": {
+   "input_tokens": 9965,
+   "output_tokens": 30443
+  }
+ },
+ {
+  "id": "g013",
+  "parent": "g008",
+  "idea": "Build full rot4/dia2 orbit-conflict rows lazily so each child's line mask is one C-level OR. Interleave a rot2 DFS for exact solutions and 2n-2 partials.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g013.py",
+  "fitness": 0.8509679017805952,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 56,
+    "triples": 0,
+    "valid_points": 56,
+    "target": 64,
+    "ratio": 0.875,
+    "solved": false,
+    "error": null,
+    "seconds": 19.64
+   },
+   {
+    "n": 34,
+    "submitted": 60,
+    "triples": 0,
+    "valid_points": 60,
+    "target": 68,
+    "ratio": 0.8823529411764706,
+    "solved": false,
+    "error": null,
+    "seconds": 19.65
+   },
+   {
+    "n": 36,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 72,
+    "ratio": 0.9444444444444444,
+    "solved": false,
+    "error": null,
+    "seconds": 19.68
+   },
+   {
+    "n": 38,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 76,
+    "ratio": 0.8421052631578947,
+    "solved": false,
+    "error": null,
+    "seconds": 19.69
+   },
+   {
+    "n": 40,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 80,
+    "ratio": 0.8,
+    "solved": false,
+    "error": null,
+    "seconds": 19.67
+   },
+   {
+    "n": 42,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 84,
+    "ratio": 0.7619047619047619,
+    "solved": false,
+    "error": null,
+    "seconds": 19.71
+   }
+  ],
+  "usage": {
+   "input_tokens": 10107,
+   "output_tokens": 29915
+  }
+ },
+ {
+  "id": "g014",
+  "parent": "g010",
+  "idea": "Faster orbit DFS with itemgetter/reduce, asymmetric completion at deep nodes, and a fix for the crashing grid tabu polisher.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g014.py",
+  "fitness": 0.9262236473536783,
+  "solved": 1,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 64,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 7.5
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.96
+   },
+   {
+    "n": 36,
+    "submitted": 66,
+    "triples": 0,
+    "valid_points": 66,
+    "target": 72,
+    "ratio": 0.9166666666666666,
+    "solved": false,
+    "error": null,
+    "seconds": 19.95
+   },
+   {
+    "n": 38,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 76,
+    "ratio": 0.8947368421052632,
+    "solved": false,
+    "error": null,
+    "seconds": 19.94
+   },
+   {
+    "n": 40,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 80,
+    "ratio": 0.9,
+    "solved": false,
+    "error": null,
+    "seconds": 19.97
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 19.98
+   }
+  ],
+  "usage": {
+   "input_tokens": 9966,
+   "output_tokens": 29630
+  }
+ },
+ {
+  "id": "g015",
+  "parent": "g012",
+  "idea": "Treat rot4/dia2 orbit solutions as labelled 2-factors on row classes, and run exact-delta tabu min-conflicts with 2-opt edge swaps after a shortened orbit DFS.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g015.py",
+  "fitness": 0.9078291367716678,
+  "solved": 0,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 61,
+    "triples": 0,
+    "valid_points": 61,
+    "target": 64,
+    "ratio": 0.953125,
+    "solved": false,
+    "error": null,
+    "seconds": 19.21
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.28
+   },
+   {
+    "n": 36,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 72,
+    "ratio": 0.8888888888888888,
+    "solved": false,
+    "error": null,
+    "seconds": 19.3
+   },
+   {
+    "n": 38,
+    "submitted": 68,
+    "triples": 0,
+    "valid_points": 68,
+    "target": 76,
+    "ratio": 0.8947368421052632,
+    "solved": false,
+    "error": null,
+    "seconds": 19.26
+   },
+   {
+    "n": 40,
+    "submitted": 72,
+    "triples": 0,
+    "valid_points": 72,
+    "target": 80,
+    "ratio": 0.9,
+    "solved": false,
+    "error": null,
+    "seconds": 19.33
+   },
+   {
+    "n": 42,
+    "submitted": 73,
+    "triples": 0,
+    "valid_points": 73,
+    "target": 84,
+    "ratio": 0.8690476190476191,
+    "solved": false,
+    "error": null,
+    "seconds": 19.33
+   }
+  ],
+  "usage": {
+   "input_tokens": 8421,
+   "output_tokens": 52605
+  }
+ },
+ {
+  "id": "g016",
+  "parent": "g012",
+  "idea": "Keep the rot4/dia2 orbit DFS that solves n=32. Replace min-conflicts tabu with full-grid LNS: destroy rows/columns, plus blockers of empty cells, then refill exactly by branch-and-bound.",
+  "path": "D:\\Three points\\runs\\20261002-014724\\programs\\g016.py",
+  "fitness": 0.9326929455992924,
+  "solved": 1,
+  "error": null,
+  "results": [
+   {
+    "n": 32,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 64,
+    "ratio": 1.0,
+    "solved": true,
+    "error": null,
+    "seconds": 5.73
+   },
+   {
+    "n": 34,
+    "submitted": 64,
+    "triples": 0,
+    "valid_points": 64,
+    "target": 68,
+    "ratio": 0.9411764705882353,
+    "solved": false,
+    "error": null,
+    "seconds": 19.76
+   },
+   {
+    "n": 36,
+    "submitted": 66,
+    "triples": 0,
+    "valid_points": 66,
+    "target": 72,
+    "ratio": 0.9166666666666666,
+    "solved": false,
+    "error": null,
+    "seconds": 19.76
+   },
+   {
+    "n": 38,
+    "submitted": 70,
+    "triples": 0,
+    "valid_points": 70,
+    "target": 76,
+    "ratio": 0.9210526315789473,
+    "solved": false,
+    "error": null,
+    "seconds": 19.77
+   },
+   {
+    "n": 40,
+    "submitted": 73,
+    "triples": 0,
+    "valid_points": 73,
+    "target": 80,
+    "ratio": 0.9125,
+    "solved": false,
+    "error": null,
+    "seconds": 19.75
+   },
+   {
+    "n": 42,
+    "submitted": 76,
+    "triples": 0,
+    "valid_points": 76,
+    "target": 84,
+    "ratio": 0.9047619047619048,
+    "solved": false,
+    "error": null,
+    "seconds": 19.75
+   }
+  ],
+  "usage": {
+   "input_tokens": 8406,
+   "output_tokens": 30543
+  }
+ }
+]
